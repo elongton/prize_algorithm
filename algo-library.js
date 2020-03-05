@@ -106,7 +106,7 @@ export const generateIdealPayoutArray = (alpha, N, E, P) => {
 
 export const addRemoveBuckets = (S, r, lengthDiff) => {
     if (S.length < r) {
-        console.log('S.length < r: ', lengthDiff)
+        // console.log('S.length < r: ', lengthDiff)
         for (let i = 0; i < lengthDiff; i++) {
             S.push(0);
         }
@@ -119,7 +119,7 @@ export const distributeRemainder = (S, N, lengthDiff) => {
     if (initialSum < N) {
         let sumDiff = N - initialSum;
         if (lengthDiff > 0) {
-            console.log('lengthdiff is > 0')
+            // console.log('lengthdiff is > 0')
             sumDiff = sumDiff / lengthDiff;
             for (let i = 1; i <= lengthDiff; i++) {
                 S[S.length - i] = sumDiff;
