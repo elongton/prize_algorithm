@@ -99,7 +99,6 @@ export const generateIdealPayoutArray = (alpha, N, E, P) => {
     // console.log(sum(idealPayout))
     return idealPayout
 }
-
 ////////////////////////
 ////BUCKET SIZING///////
 ////////////////////////

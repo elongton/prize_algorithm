@@ -125,10 +125,11 @@ let total_entrants = 2000;
 let N = Math.round(0.25 * total_entrants) //total entrants that will receive points
 let r = 25; //number of buckets
 let S_initial = [1, 1, 1, 2];
+
 //////note - prize pool cannot be <= N * E//////////
 let B = 2000000; //total prize pool
-let P = findClosestNiceNum(B * 0.15); //first prize winnings
 let E = 4; //initial amount to allocate to all users
+let P = findClosestNiceNum(B * 0.15); //first prize winnings
 
 
 createPrizeDistribution(S_initial, N, r, B, P, E);
