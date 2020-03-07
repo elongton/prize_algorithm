@@ -41,7 +41,7 @@ export const binaryBucketSolver = (condition, low, high, r, n, t_length) => {
             high = high;
         }
         mid = (high + low) / 2;
-        // console.log('mid: ' + mid, 'bucketPoly: ' + bucketPoly(mid, r, n, t_length))
+        console.log('mid: ' + mid, 'bucketPoly: ' + bucketPoly(mid, r, n, t_length))
     }
     return mid
 }
@@ -60,7 +60,7 @@ export const powerSolver = (condition, low, high, n, b, p, e) => {
             high = high;
         }
         mid = (high + low) / 2;
-        // console.log('mid: ' + mid, 'power: ' + power(mid, n, b, p, e))
+        console.log('mid: ' + mid, 'power: ' + power(mid, n, b, p, e))
     }
     return mid
 }
@@ -83,7 +83,7 @@ export const findClosestNiceNum = (n) => {
     } else if (n >= 10000) {
         return 1000 * Math.floor(n / 1000)
     } else {
-        return n;
+        return Math.floor(n);
     }
 }
 

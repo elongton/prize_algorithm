@@ -45,7 +45,7 @@ export const createPrizeDistribution = (S_initial, N, r, B, P, E) => {
 
 
         /////IDEAL PAYOUT INITIALIZE//////
-        let alpha = powerSolver(0.1, 0.01, 10, N, B, P, E)
+        let alpha = powerSolver(0.1, 0.01, 1000, N, B, P, E)
         let idealPayout = generateIdealPayoutArray(alpha, N, E, P)
         let sStart, sFinish, payoutSlice, payoutAverage;
         let L = 0; //remainder
@@ -121,15 +121,15 @@ export const createPrizeDistribution = (S_initial, N, r, B, P, E) => {
 }
 
 
-let total_entrants = 2000;
-let N = Math.round(0.25 * total_entrants) //total entrants that will receive points
-let r = 25; //number of buckets
-let S_initial = [1, 1, 1, 2];
-
 //////note - prize pool cannot be <= N * E//////////
-let B = 2000000; //total prize pool
-let E = 4; //initial amount to allocate to all users
-let P = findClosestNiceNum(B * 0.15); //first prize winnings
+let B = 1000; //total prize pool
+let P = 100; //first prize winnings
+let N = 100;// Math.round(0.1 * total_entrants) //total entrants that will receive points
+let E = 2; //initial amount to allocate to all users
+let r = 10; //number of buckets
+let S_initial = [1, 1, 1];
+
+
 
 
 createPrizeDistribution(S_initial, N, r, B, P, E);
